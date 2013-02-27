@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Campushallen till iCalendar</title>
+  <link href="<%= @base_url %>/bootstrap/bootstrap.css" rel="stylesheet">
+  <script type="text/javascript">
+/* <![CDATA[ */
+    (function() {
+        var s = document.createElement('script'), t = document.getElementsByTagName('script')[0];
+        s.type = 'text/javascript';
+        s.async = true;
+        s.src = 'http://api.flattr.com/js/0.6/load.js?mode=auto';
+        t.parentNode.insertBefore(s, t);
+    })();
+/* ]]> */
+  </script>
+</head>
+<body style="padding-top: 40px; padding-left: 10px;">
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="container">
+      <a class="brand" href="#">Campushallen till iCalendar</a>
+      <ul class="nav">
+        <li>
+          <a href="./">Hem</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="page-header">
+    <br/>
+
+    <h2>Skapa iCalendar feed (ics)</h2>
+  </div>
+  <div class="row">
+    <div class="span11">
+      <%= yield %>
+    </div>
+    <div class="span4 offset1">
+      <h3>Om</h3>
+      <p>Campushallen till iCalendar konverterar dina bokade träningar till en ics-fil som du kan använda för att
+      prenumerera på bokningar du gör via campushallens webinterface eller mobilapplikation.</p>
+
+      <p>Bokningar du gör kommer automatiskt hamna i feeden efter ca 30 minuter. Du använder den skapade länken genom att
+      lägga till den till ditt kalenderprogram, exempelvis Google Calendar.</p>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <a class="FlattrButton" style="display:none;" rev="flattr;button:compact;" href="http://www.martyn.se/campushallen/"></a>
+      <noscript>
+        <a href="http://flattr.com/thing/466090/Campushallen-till-iCalendar" target="_blank">
+          <img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" /></a>
+      </noscript>
+      <p>&copy; Martin Svenson, 2012</p>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>

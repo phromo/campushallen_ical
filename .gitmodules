@@ -1,0 +1,3 @@
+[submodule "bootstrap"]
+path = lib/phromo_campushallen/public/bootstrap
+url = https://github.com/twitter/bootstrap.git

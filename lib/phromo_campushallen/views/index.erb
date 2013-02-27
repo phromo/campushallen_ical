@@ -1,0 +1,40 @@
+<p>Steg 1 (av 2). Fyll i ditt användarnamn och lösenord till campushallens bokningssysstem</p>
+
+<p>
+  <span class="label warning">Warning</span>
+  <em>Ditt användarnamn och lösenord kommer att lagras på en server för att regelbundet
+    kunna uppdatera
+    din kalender-feed. Se till att du använder ett unikt lösenord för campushallen som du inte använder på några
+    andra tjänster.</em></p>
+
+<% if @login_failed %>
+    <div class="alert-message error">
+      <a class="close" href="#">×</a>
+
+      <p><strong>Autentiseringsfel</strong> - Det gick inte logga in på campushallen.se,  dubbelkolla ditt lösenord</p>
+    </div>
+<% end %>
+
+<form class="form-stacked" action="<%= @base_url %>/makefeed" method="post">
+  <fieldset>
+    <div class="clearfix">
+      <label for="username">Campushallen användarnamn (e-post)</label>
+
+      <div class="input">
+        <input class="xxlarge" id="username" type="text" name="username" size="30" value="<%= params[:username] %>"/><br/>
+      </div>
+    </div>
+
+    <div class="clearfix">
+      <label for="password">Lösenord</label>
+
+      <div class="input">
+        <input class="xlarge" id="password" type="password" name="password" size="30" value=""/><br/>
+      </div>
+    </div>
+
+    <div class="actions">
+      <button class="btn primary" type="submit" name="Submit">Skapa</button>
+    </div>
+  </fieldset>
+</form>
